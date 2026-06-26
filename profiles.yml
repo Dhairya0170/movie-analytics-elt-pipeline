@@ -1,0 +1,12 @@
+movie_dbt:
+  outputs:
+    dev:
+      type: postgres
+      host: 127.0.0.1      # <-- CHANGED THIS LINE
+      user: admin
+      pass: admin_password
+      port: 5433
+      dbname: movie_db
+      schema: public
+      threads: 4
+  target: dev

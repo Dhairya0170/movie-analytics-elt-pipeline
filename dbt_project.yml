@@ -1,0 +1,26 @@
+name: 'movie_dbt'
+version: '1.0.0'
+config-version: 2
+
+# This points to the profile we defined in profiles.yml
+profile: 'movie_dbt'
+
+# These point to where dbt will look for files
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# This structures our staging (views) and production marts (tables)
+models:
+  movie_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

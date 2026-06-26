@@ -1,0 +1,743 @@
+[0m21:57:07.798097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C45D105D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C45D1CD8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C45D1CDC90>]}
+
+
+============================== 21:57:07.802017 | dbc36917-4e2c-403f-9736-d633c59184e5 ==============================
+[0m21:57:07.802017 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m21:57:07.803350 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt debug --profiles-dir .', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m21:57:07.821212 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m21:57:07.822223 [info ] [MainThread]: python version: 3.11.0
+[0m21:57:07.823223 [info ] [MainThread]: python path: C:\Users\Dhairya Parmar\AppData\Local\Programs\Python\Python311\python.exe
+[0m21:57:07.824220 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m21:57:08.039616 [info ] [MainThread]: Using profiles dir at .
+[0m21:57:08.040613 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m21:57:08.040613 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\dbt_project.yml
+[0m21:57:08.042685 [info ] [MainThread]: adapter type: postgres
+[0m21:57:08.042685 [info ] [MainThread]: adapter version: 1.10.2
+[0m21:57:08.143325 [info ] [MainThread]: Configuration:
+[0m21:57:08.144325 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:57:08.145777 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:57:08.146284 [info ] [MainThread]: Required dependencies:
+[0m21:57:08.146284 [debug] [MainThread]: Executing "git --help"
+[0m21:57:08.195259 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:57:08.196260 [debug] [MainThread]: STDERR: "b''"
+[0m21:57:08.197260 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:57:08.197260 [info ] [MainThread]: Connection:
+[0m21:57:08.198257 [info ] [MainThread]:   host: localhost
+[0m21:57:08.198257 [info ] [MainThread]:   port: 5432
+[0m21:57:08.199254 [info ] [MainThread]:   user: admin
+[0m21:57:08.199254 [info ] [MainThread]:   database: movie_db
+[0m21:57:08.200390 [info ] [MainThread]:   schema: public
+[0m21:57:08.200390 [info ] [MainThread]:   connect_timeout: 10
+[0m21:57:08.201401 [info ] [MainThread]:   role: None
+[0m21:57:08.202404 [info ] [MainThread]:   search_path: None
+[0m21:57:08.202404 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:57:08.203402 [info ] [MainThread]:   sslmode: None
+[0m21:57:08.203402 [info ] [MainThread]:   sslcert: None
+[0m21:57:08.204400 [info ] [MainThread]:   sslkey: None
+[0m21:57:08.204400 [info ] [MainThread]:   sslrootcert: None
+[0m21:57:08.205404 [info ] [MainThread]:   application_name: dbt
+[0m21:57:08.206400 [info ] [MainThread]:   retries: 1
+[0m21:57:08.206400 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m21:57:08.774720 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:57:08.989421 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:57:08.990419 [debug] [MainThread]: On debug: select 1 as id
+[0m21:57:08.990419 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:57:09.080248 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+[0m21:57:09.120842 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m21:57:09.121846 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m21:57:09.122846 [debug] [MainThread]: On debug: No close available on handle
+[0m21:57:09.122846 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:57:09.123848 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:57:09.124847 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:57:09.125847 [debug] [MainThread]: Command `dbt debug` failed at 21:57:09.125847 after 1.46 seconds
+[0m21:57:09.126846 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:57:09.126846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C45D21BD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C45AF18710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C45AF1BF90>]}
+[0m21:57:09.127845 [debug] [MainThread]: Flushing usage events
+[0m21:57:10.178371 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:58:48.286181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C05E69EB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C057525290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C05E69E050>]}
+
+
+============================== 21:58:48.291353 | b56410c4-5cfa-4088-a5ed-c939918e5793 ==============================
+[0m21:58:48.291353 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m21:58:48.292362 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'invocation_command': 'dbt debug --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m21:58:48.317849 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m21:58:48.318988 [info ] [MainThread]: python version: 3.11.0
+[0m21:58:48.320136 [info ] [MainThread]: python path: C:\Users\Dhairya Parmar\AppData\Local\Programs\Python\Python311\python.exe
+[0m21:58:48.321155 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m21:58:48.527579 [info ] [MainThread]: Using profiles dir at .
+[0m21:58:48.528149 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m21:58:48.529159 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\dbt_project.yml
+[0m21:58:48.529159 [info ] [MainThread]: adapter type: postgres
+[0m21:58:48.530519 [info ] [MainThread]: adapter version: 1.10.2
+[0m21:58:48.642131 [info ] [MainThread]: Configuration:
+[0m21:58:48.643141 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:58:48.643141 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:58:48.644363 [info ] [MainThread]: Required dependencies:
+[0m21:58:48.644363 [debug] [MainThread]: Executing "git --help"
+[0m21:58:48.702566 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:58:48.703071 [debug] [MainThread]: STDERR: "b''"
+[0m21:58:48.704129 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:58:48.704129 [info ] [MainThread]: Connection:
+[0m21:58:48.705140 [info ] [MainThread]:   host: localhost
+[0m21:58:48.705140 [info ] [MainThread]:   port: 5432
+[0m21:58:48.706139 [info ] [MainThread]:   user: admin
+[0m21:58:48.706139 [info ] [MainThread]:   database: movie_db
+[0m21:58:48.707138 [info ] [MainThread]:   schema: public
+[0m21:58:48.707138 [info ] [MainThread]:   connect_timeout: 10
+[0m21:58:48.708139 [info ] [MainThread]:   role: None
+[0m21:58:48.709139 [info ] [MainThread]:   search_path: None
+[0m21:58:48.709139 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:58:48.710143 [info ] [MainThread]:   sslmode: None
+[0m21:58:48.710143 [info ] [MainThread]:   sslcert: None
+[0m21:58:48.711232 [info ] [MainThread]:   sslkey: None
+[0m21:58:48.711232 [info ] [MainThread]:   sslrootcert: None
+[0m21:58:48.712454 [info ] [MainThread]:   application_name: dbt
+[0m21:58:48.713091 [info ] [MainThread]:   retries: 1
+[0m21:58:48.713091 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m21:58:49.149209 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:58:49.249065 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:58:49.251064 [debug] [MainThread]: On debug: select 1 as id
+[0m21:58:49.251064 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:58:49.350740 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+[0m21:58:49.400191 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m21:58:49.400191 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m21:58:49.401189 [debug] [MainThread]: On debug: No close available on handle
+[0m21:58:49.401189 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:58:49.402188 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:58:49.402188 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "admin"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:58:49.403528 [debug] [MainThread]: Command `dbt debug` failed at 21:58:49.403528 after 1.25 seconds
+[0m21:58:49.404784 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:58:49.404784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C05E972010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C05E69E2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C05E69D990>]}
+[0m21:58:49.405795 [debug] [MainThread]: Flushing usage events
+[0m21:58:50.385950 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:00:07.934405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024129094950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002412904EB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002412904EB90>]}
+
+
+============================== 22:00:07.939985 | efb6eb58-1fbf-41eb-bc67-19dc54ee31e8 ==============================
+[0m22:00:07.939985 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m22:00:07.941988 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m22:00:07.959639 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m22:00:07.960647 [info ] [MainThread]: python version: 3.11.0
+[0m22:00:07.960647 [info ] [MainThread]: python path: C:\Users\Dhairya Parmar\AppData\Local\Programs\Python\Python311\python.exe
+[0m22:00:07.962146 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m22:00:08.166920 [info ] [MainThread]: Using profiles dir at .
+[0m22:00:08.167919 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m22:00:08.168925 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\dbt_project.yml
+[0m22:00:08.169925 [info ] [MainThread]: adapter type: postgres
+[0m22:00:08.170924 [info ] [MainThread]: adapter version: 1.10.2
+[0m22:00:08.281557 [info ] [MainThread]: Configuration:
+[0m22:00:08.282557 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:00:08.283560 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:00:08.283560 [info ] [MainThread]: Required dependencies:
+[0m22:00:08.284818 [debug] [MainThread]: Executing "git --help"
+[0m22:00:08.325743 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:00:08.326815 [debug] [MainThread]: STDERR: "b''"
+[0m22:00:08.326815 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:00:08.328020 [info ] [MainThread]: Connection:
+[0m22:00:08.328020 [info ] [MainThread]:   host: 127.0.0.1
+[0m22:00:08.329032 [info ] [MainThread]:   port: 5432
+[0m22:00:08.329032 [info ] [MainThread]:   user: admin
+[0m22:00:08.330029 [info ] [MainThread]:   database: movie_db
+[0m22:00:08.331032 [info ] [MainThread]:   schema: public
+[0m22:00:08.331619 [info ] [MainThread]:   connect_timeout: 10
+[0m22:00:08.332124 [info ] [MainThread]:   role: None
+[0m22:00:08.332124 [info ] [MainThread]:   search_path: None
+[0m22:00:08.332124 [info ] [MainThread]:   keepalives_idle: 0
+[0m22:00:08.333617 [info ] [MainThread]:   sslmode: None
+[0m22:00:08.333617 [info ] [MainThread]:   sslcert: None
+[0m22:00:08.334785 [info ] [MainThread]:   sslkey: None
+[0m22:00:08.334785 [info ] [MainThread]:   sslrootcert: None
+[0m22:00:08.335791 [info ] [MainThread]:   application_name: dbt
+[0m22:00:08.335791 [info ] [MainThread]:   retries: 1
+[0m22:00:08.336804 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m22:00:08.742884 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m22:00:08.826320 [debug] [MainThread]: Using postgres connection "debug"
+[0m22:00:08.827320 [debug] [MainThread]: On debug: select 1 as id
+[0m22:00:08.827320 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:00:08.868582 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+[0m22:00:09.008805 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m22:00:09.009816 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m22:00:09.010814 [debug] [MainThread]: On debug: No close available on handle
+[0m22:00:09.010814 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m22:00:09.011813 [info ] [MainThread]: [31m1 check failed:[0m
+[0m22:00:09.012812 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "admin"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m22:00:09.013812 [debug] [MainThread]: Command `dbt debug` failed at 22:00:09.013812 after 1.17 seconds
+[0m22:00:09.013812 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:00:09.015189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241290D6890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241292C1ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024126D8BF10>]}
+[0m22:00:09.015189 [debug] [MainThread]: Flushing usage events
+[0m22:00:09.963266 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:04:57.187474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002837F88E6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002837F7AF890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002837F7C1ED0>]}
+
+
+============================== 22:04:57.192033 | 6495cbef-4e75-4493-b9a9-8e9fab4354d4 ==============================
+[0m22:04:57.192033 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m22:04:57.193030 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug --profiles-dir .', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m22:04:57.221967 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m22:04:57.222969 [info ] [MainThread]: python version: 3.11.0
+[0m22:04:57.222969 [info ] [MainThread]: python path: C:\Users\Dhairya Parmar\AppData\Local\Programs\Python\Python311\python.exe
+[0m22:04:57.224114 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m22:04:57.462090 [info ] [MainThread]: Using profiles dir at .
+[0m22:04:57.463091 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m22:04:57.464450 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\dbt_project.yml
+[0m22:04:57.465591 [info ] [MainThread]: adapter type: postgres
+[0m22:04:57.466602 [info ] [MainThread]: adapter version: 1.10.2
+[0m22:04:57.575431 [info ] [MainThread]: Configuration:
+[0m22:04:57.576797 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:04:57.576797 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:04:57.578249 [info ] [MainThread]: Required dependencies:
+[0m22:04:57.578249 [debug] [MainThread]: Executing "git --help"
+[0m22:04:57.638123 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:04:57.640026 [debug] [MainThread]: STDERR: "b''"
+[0m22:04:57.640026 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:04:57.641035 [info ] [MainThread]: Connection:
+[0m22:04:57.642036 [info ] [MainThread]:   host: 127.0.0.1
+[0m22:04:57.642036 [info ] [MainThread]:   port: 5432
+[0m22:04:57.643038 [info ] [MainThread]:   user: admin
+[0m22:04:57.643543 [info ] [MainThread]:   database: movie_db
+[0m22:04:57.643543 [info ] [MainThread]:   schema: public
+[0m22:04:57.644553 [info ] [MainThread]:   connect_timeout: 10
+[0m22:04:57.644553 [info ] [MainThread]:   role: None
+[0m22:04:57.645559 [info ] [MainThread]:   search_path: None
+[0m22:04:57.646564 [info ] [MainThread]:   keepalives_idle: 0
+[0m22:04:57.646564 [info ] [MainThread]:   sslmode: None
+[0m22:04:57.647725 [info ] [MainThread]:   sslcert: None
+[0m22:04:57.647725 [info ] [MainThread]:   sslkey: None
+[0m22:04:57.648860 [info ] [MainThread]:   sslrootcert: None
+[0m22:04:57.648860 [info ] [MainThread]:   application_name: dbt
+[0m22:04:57.649869 [info ] [MainThread]:   retries: 1
+[0m22:04:57.649869 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m22:04:58.126097 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m22:04:58.265823 [debug] [MainThread]: Using postgres connection "debug"
+[0m22:04:58.266327 [debug] [MainThread]: On debug: select 1 as id
+[0m22:04:58.267335 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:04:58.317163 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "admin"
+
+[0m22:04:58.360085 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m22:04:58.361144 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m22:04:58.361679 [debug] [MainThread]: On debug: No close available on handle
+[0m22:04:58.362226 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m22:04:58.363305 [info ] [MainThread]: [31m1 check failed:[0m
+[0m22:04:58.364385 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "admin"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m22:04:58.365397 [debug] [MainThread]: Command `dbt debug` failed at 22:04:58.365397 after 1.30 seconds
+[0m22:04:58.365397 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:04:58.366394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002837F9C5950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002837FA3D150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002837F8DEDD0>]}
+[0m22:04:58.366394 [debug] [MainThread]: Flushing usage events
+[0m22:04:59.329691 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:06:04.755601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002045C8BB050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020465BCFD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020465CAC210>]}
+
+
+============================== 22:06:04.760255 | a7dc2a17-6765-445f-9ed5-a19a362490ec ==============================
+[0m22:06:04.760255 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m22:06:04.761260 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m22:06:04.782329 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m22:06:04.783585 [info ] [MainThread]: python version: 3.11.0
+[0m22:06:04.783585 [info ] [MainThread]: python path: C:\Users\Dhairya Parmar\AppData\Local\Programs\Python\Python311\python.exe
+[0m22:06:04.784889 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m22:06:04.967675 [info ] [MainThread]: Using profiles dir at .
+[0m22:06:04.968675 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m22:06:04.968675 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\dbt_project.yml
+[0m22:06:04.970678 [info ] [MainThread]: adapter type: postgres
+[0m22:06:04.970678 [info ] [MainThread]: adapter version: 1.10.2
+[0m22:06:05.071245 [info ] [MainThread]: Configuration:
+[0m22:06:05.072244 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:06:05.073242 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:06:05.073242 [info ] [MainThread]: Required dependencies:
+[0m22:06:05.074246 [debug] [MainThread]: Executing "git --help"
+[0m22:06:05.122039 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:06:05.123043 [debug] [MainThread]: STDERR: "b''"
+[0m22:06:05.123043 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:06:05.124276 [info ] [MainThread]: Connection:
+[0m22:06:05.124276 [info ] [MainThread]:   host: 127.0.0.1
+[0m22:06:05.125467 [info ] [MainThread]:   port: 5433
+[0m22:06:05.125467 [info ] [MainThread]:   user: admin
+[0m22:06:05.126536 [info ] [MainThread]:   database: movie_db
+[0m22:06:05.126536 [info ] [MainThread]:   schema: public
+[0m22:06:05.127556 [info ] [MainThread]:   connect_timeout: 10
+[0m22:06:05.127556 [info ] [MainThread]:   role: None
+[0m22:06:05.128569 [info ] [MainThread]:   search_path: None
+[0m22:06:05.128569 [info ] [MainThread]:   keepalives_idle: 0
+[0m22:06:05.130019 [info ] [MainThread]:   sslmode: None
+[0m22:06:05.131027 [info ] [MainThread]:   sslcert: None
+[0m22:06:05.131027 [info ] [MainThread]:   sslkey: None
+[0m22:06:05.132028 [info ] [MainThread]:   sslrootcert: None
+[0m22:06:05.132028 [info ] [MainThread]:   application_name: dbt
+[0m22:06:05.133028 [info ] [MainThread]:   retries: 1
+[0m22:06:05.134029 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m22:06:05.559378 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m22:06:05.680939 [debug] [MainThread]: Using postgres connection "debug"
+[0m22:06:05.680939 [debug] [MainThread]: On debug: select 1 as id
+[0m22:06:05.681938 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:06:05.709465 [debug] [MainThread]: SQL status: SELECT 1 in 0.027 seconds
+[0m22:06:05.711588 [debug] [MainThread]: On debug: Close
+[0m22:06:05.712121 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:06:05.713174 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:06:05.714229 [debug] [MainThread]: Command `dbt debug` succeeded at 22:06:05.714229 after 1.06 seconds
+[0m22:06:05.714748 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:06:05.715803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020465D1E590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204664A82D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204664A8490>]}
+[0m22:06:05.716327 [debug] [MainThread]: Flushing usage events
+[0m22:06:06.797830 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:07:07.976495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C16AF5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C1636390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C163E0D0>]}
+
+
+============================== 22:07:07.980843 | d244f44c-7dcc-4f76-91c4-d12c603dca48 ==============================
+[0m22:07:07.980843 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m22:07:07.981857 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m22:07:08.540472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd244f44c-7dcc-4f76-91c4-d12c603dca48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C17F79D0>]}
+[0m22:07:08.600599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd244f44c-7dcc-4f76-91c4-d12c603dca48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0BCA94490>]}
+[0m22:07:08.602599 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m22:07:09.050555 [debug] [MainThread]: checksum: de8fe69f1d411a10a6ddb2c00f0e81f5b939b33c9baa78fbb22ceb0e17311892, vars: {}, profile: movie_dbt, target: dev, version: 1.12.0b3
+[0m22:07:09.052586 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:07:09.053595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd244f44c-7dcc-4f76-91c4-d12c603dca48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0BFC7B850>]}
+[0m22:07:09.793895 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.movie_dbt.marts
+- models.movie_dbt.staging
+[0m22:07:09.799851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd244f44c-7dcc-4f76-91c4-d12c603dca48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C1C209D0>]}
+[0m22:07:09.857775 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\manifest.json
+[0m22:07:09.864010 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\semantic_manifest.json
+[0m22:07:09.905307 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\osi_document.json
+[0m22:07:09.922657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd244f44c-7dcc-4f76-91c4-d12c603dca48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C1CCDFD0>]}
+[0m22:07:09.923673 [info ] [MainThread]: Found 475 macros
+[0m22:07:09.924959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd244f44c-7dcc-4f76-91c4-d12c603dca48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C1C2A390>]}
+[0m22:07:09.927061 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m22:07:09.927565 [debug] [MainThread]: Command end result
+[0m22:07:09.953976 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\manifest.json
+[0m22:07:09.958630 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\semantic_manifest.json
+[0m22:07:09.962459 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\osi_document.json
+[0m22:07:09.967943 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\run_results.json
+[0m22:07:09.968953 [debug] [MainThread]: Command `dbt run` succeeded at 22:07:09.968953 after 2.10 seconds
+[0m22:07:09.968953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0BF271CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C16223D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0C1C3E9D0>]}
+[0m22:07:09.969953 [debug] [MainThread]: Flushing usage events
+[0m22:07:10.930828 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:10:53.523753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F41FEB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F42AD2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F42AFD50>]}
+
+
+============================== 22:10:53.529863 | 01f3a02b-0431-4997-9a45-a82d478d668a ==============================
+[0m22:10:53.529863 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m22:10:53.530897 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m22:10:54.043027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '01f3a02b-0431-4997-9a45-a82d478d668a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F426F8D0>]}
+[0m22:10:54.108266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '01f3a02b-0431-4997-9a45-a82d478d668a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297EF654510>]}
+[0m22:10:54.110285 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m22:10:54.671271 [debug] [MainThread]: checksum: de8fe69f1d411a10a6ddb2c00f0e81f5b939b33c9baa78fbb22ceb0e17311892, vars: {}, profile: movie_dbt, target: dev, version: 1.12.0b3
+[0m22:10:54.801175 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:10:54.801175 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:10:54.802456 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:10:54.802456 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.movie_dbt.staging
+- models.movie_dbt.marts
+[0m22:10:54.809465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '01f3a02b-0431-4997-9a45-a82d478d668a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F4897E90>]}
+[0m22:10:54.862564 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\manifest.json
+[0m22:10:54.869505 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\semantic_manifest.json
+[0m22:10:54.903595 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\osi_document.json
+[0m22:10:54.921791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '01f3a02b-0431-4997-9a45-a82d478d668a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F480A050>]}
+[0m22:10:54.922812 [info ] [MainThread]: Found 475 macros
+[0m22:10:54.922812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '01f3a02b-0431-4997-9a45-a82d478d668a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F47E4FD0>]}
+[0m22:10:54.925562 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m22:10:54.928129 [debug] [MainThread]: Command end result
+[0m22:10:54.958316 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\manifest.json
+[0m22:10:54.963405 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\semantic_manifest.json
+[0m22:10:54.970125 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\osi_document.json
+[0m22:10:54.975358 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\run_results.json
+[0m22:10:54.977358 [debug] [MainThread]: Command `dbt run` succeeded at 22:10:54.977358 after 1.60 seconds
+[0m22:10:54.978358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F2005090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F41E2310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000297F4123890>]}
+[0m22:10:54.979359 [debug] [MainThread]: Flushing usage events
+[0m22:10:56.123682 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:14:28.951900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2A41E810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F281A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F280890>]}
+
+
+============================== 22:14:28.957901 | d16b9c10-2039-42fc-998d-fae00f836e68 ==============================
+[0m22:14:28.957901 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m22:14:28.958904 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Dhairya Parmar\\Desktop\\practice\\movie_analytics_pipeline\\movie_dbt\\logs'}
+[0m22:14:29.405230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F1C5650>]}
+[0m22:14:29.464982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2A614050>]}
+[0m22:14:29.467275 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m22:14:29.950335 [debug] [MainThread]: checksum: de8fe69f1d411a10a6ddb2c00f0e81f5b939b33c9baa78fbb22ceb0e17311892, vars: {}, profile: movie_dbt, target: dev, version: 1.12.0b3
+[0m22:14:30.064925 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m22:14:30.065938 [debug] [MainThread]: Partial parsing: added file: movie_dbt://models\marts\dim_genres.sql
+[0m22:14:30.065938 [debug] [MainThread]: Partial parsing: added file: movie_dbt://models\staging\stg_movies.sql
+[0m22:14:30.065938 [debug] [MainThread]: Partial parsing: added file: movie_dbt://models\marts\dim_date.sql
+[0m22:14:30.066941 [debug] [MainThread]: Partial parsing: added file: movie_dbt://models\marts\fact_movies.sql
+[0m22:14:30.365067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F544890>]}
+[0m22:14:30.430548 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\manifest.json
+[0m22:14:30.435050 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\semantic_manifest.json
+[0m22:14:30.468339 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\osi_document.json
+[0m22:14:30.489525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2FACDA50>]}
+[0m22:14:30.490053 [info ] [MainThread]: Found 4 models, 475 macros
+[0m22:14:30.491116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F46D6D0>]}
+[0m22:14:30.492694 [info ] [MainThread]: 
+[0m22:14:30.493217 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:14:30.493746 [info ] [MainThread]: 
+[0m22:14:30.495032 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:14:30.500154 [debug] [ThreadPool]: Acquiring new postgres connection 'list_movie_db'
+[0m22:14:30.683559 [debug] [ThreadPool]: Using postgres connection "list_movie_db"
+[0m22:14:30.684555 [debug] [ThreadPool]: On list_movie_db: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "connection_name": "list_movie_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m22:14:30.684555 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:30.795845 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.111 seconds
+[0m22:14:30.797935 [debug] [ThreadPool]: On list_movie_db: Close
+[0m22:14:30.800600 [debug] [ThreadPool]: Acquiring new postgres connection 'list_movie_db_public'
+[0m22:14:30.811282 [debug] [ThreadPool]: Using postgres connection "list_movie_db_public"
+[0m22:14:30.812360 [debug] [ThreadPool]: On list_movie_db_public: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "connection_name": "list_movie_db_public"} */
+select
+      'movie_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'movie_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'movie_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m22:14:30.812898 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:30.894387 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.081 seconds
+[0m22:14:30.896519 [debug] [ThreadPool]: On list_movie_db_public: ROLLBACK
+[0m22:14:30.898831 [debug] [ThreadPool]: On list_movie_db_public: Close
+[0m22:14:30.904167 [debug] [MainThread]: Using postgres connection "master"
+[0m22:14:30.905249 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m22:14:30.905832 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:14:30.970487 [debug] [MainThread]: SQL status: SELECT 0 in 0.065 seconds
+[0m22:14:30.972066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F4EDB50>]}
+[0m22:14:30.972594 [debug] [MainThread]: On master: ROLLBACK
+[0m22:14:30.974725 [debug] [MainThread]: On master: COMMIT
+[0m22:14:30.975252 [debug] [MainThread]: Using postgres connection "master"
+[0m22:14:30.975845 [debug] [MainThread]: On master: COMMIT
+[0m22:14:30.978521 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m22:14:30.979054 [debug] [MainThread]: On master: Close
+[0m22:14:30.987080 [debug] [Thread-1 (]: Began running node model.movie_dbt.stg_movies
+[0m22:14:30.988158 [info ] [Thread-1 (]: 1 of 4 START sql view model public.stg_movies .................................. [RUN]
+[0m22:14:30.988689 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.movie_dbt.stg_movies'
+[0m22:14:30.989223 [debug] [Thread-1 (]: Began compiling node model.movie_dbt.stg_movies
+[0m22:14:30.999210 [debug] [Thread-1 (]: Writing injected SQL for node "model.movie_dbt.stg_movies"
+[0m22:14:31.002723 [debug] [Thread-1 (]: Began executing node model.movie_dbt.stg_movies
+[0m22:14:31.038547 [debug] [Thread-1 (]: Writing runtime sql for node "model.movie_dbt.stg_movies"
+[0m22:14:31.041365 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.stg_movies"
+[0m22:14:31.042843 [debug] [Thread-1 (]: On model.movie_dbt.stg_movies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.stg_movies"} */
+
+  create view "movie_db"."public"."stg_movies__dbt_tmp"
+    
+    
+  as (
+    
+
+SELECT
+    CAST(id AS INTEGER) AS movie_id,
+    CAST(title AS VARCHAR) AS title,
+    CAST(release_date AS DATE) AS release_date,
+    CAST(genre AS VARCHAR) AS genre,
+    CAST(budget AS NUMERIC) AS budget,
+    CAST(revenue AS NUMERIC) AS revenue,
+    CAST(vote_average AS NUMERIC) AS rating
+FROM raw.movies
+WHERE release_date IS NOT NULL
+  );
+[0m22:14:31.042843 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:14:31.091666 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.048 seconds
+[0m22:14:31.098663 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.stg_movies"
+[0m22:14:31.099273 [debug] [Thread-1 (]: On model.movie_dbt.stg_movies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.stg_movies"} */
+alter table "movie_db"."public"."stg_movies__dbt_tmp" rename to "stg_movies"
+[0m22:14:31.104505 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m22:14:31.118959 [debug] [Thread-1 (]: On model.movie_dbt.stg_movies: COMMIT
+[0m22:14:31.119967 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.stg_movies"
+[0m22:14:31.120967 [debug] [Thread-1 (]: On model.movie_dbt.stg_movies: COMMIT
+[0m22:14:31.134940 [debug] [Thread-1 (]: SQL status: COMMIT in 0.013 seconds
+[0m22:14:31.141329 [debug] [Thread-1 (]: Applying DROP to: "movie_db"."public"."stg_movies__dbt_backup"
+[0m22:14:31.145667 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.stg_movies"
+[0m22:14:31.146675 [debug] [Thread-1 (]: On model.movie_dbt.stg_movies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.stg_movies"} */
+drop view if exists "movie_db"."public"."stg_movies__dbt_backup" cascade
+[0m22:14:31.152007 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m22:14:31.155210 [debug] [Thread-1 (]: On model.movie_dbt.stg_movies: Close
+[0m22:14:31.158389 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2FEFD850>]}
+[0m22:14:31.159449 [info ] [Thread-1 (]: 1 of 4 OK created sql view model public.stg_movies ............................. [[32mCREATE VIEW[0m in 0.17s]
+[0m22:14:31.160587 [debug] [Thread-1 (]: Finished running node model.movie_dbt.stg_movies
+[0m22:14:31.161650 [debug] [Thread-3 (]: Began running node model.movie_dbt.dim_date
+[0m22:14:31.162182 [debug] [Thread-4 (]: Began running node model.movie_dbt.dim_genres
+[0m22:14:31.162711 [info ] [Thread-3 (]: 2 of 4 START sql table model public.dim_date ................................... [RUN]
+[0m22:14:31.163720 [info ] [Thread-4 (]: 3 of 4 START sql table model public.dim_genres ................................. [RUN]
+[0m22:14:31.164531 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.movie_dbt.dim_date'
+[0m22:14:31.165071 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.movie_dbt.dim_genres'
+[0m22:14:31.165605 [debug] [Thread-3 (]: Began compiling node model.movie_dbt.dim_date
+[0m22:14:31.166138 [debug] [Thread-4 (]: Began compiling node model.movie_dbt.dim_genres
+[0m22:14:31.170375 [debug] [Thread-3 (]: Writing injected SQL for node "model.movie_dbt.dim_date"
+[0m22:14:31.174094 [debug] [Thread-4 (]: Writing injected SQL for node "model.movie_dbt.dim_genres"
+[0m22:14:31.176275 [debug] [Thread-3 (]: Began executing node model.movie_dbt.dim_date
+[0m22:14:31.177298 [debug] [Thread-4 (]: Began executing node model.movie_dbt.dim_genres
+[0m22:14:31.201204 [debug] [Thread-3 (]: Writing runtime sql for node "model.movie_dbt.dim_date"
+[0m22:14:31.205237 [debug] [Thread-4 (]: Writing runtime sql for node "model.movie_dbt.dim_genres"
+[0m22:14:31.208314 [debug] [Thread-4 (]: Using postgres connection "model.movie_dbt.dim_genres"
+[0m22:14:31.209213 [debug] [Thread-3 (]: Using postgres connection "model.movie_dbt.dim_date"
+[0m22:14:31.209213 [debug] [Thread-4 (]: On model.movie_dbt.dim_genres: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.dim_genres"} */
+
+  
+    
+
+  create  table "movie_db"."public"."dim_genres__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    MD5(genre) AS genre_key,
+    genre AS genre_name
+FROM "movie_db"."public"."stg_movies"
+GROUP BY 1, 2
+  );
+  
+[0m22:14:31.210503 [debug] [Thread-3 (]: On model.movie_dbt.dim_date: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.dim_date"} */
+
+  
+    
+
+  create  table "movie_db"."public"."dim_date__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT DISTINCT
+    release_date AS date_key,
+    EXTRACT(YEAR FROM release_date) AS release_year,
+    EXTRACT(MONTH FROM release_date) AS release_month,
+    EXTRACT(QUARTER FROM release_date) AS release_quarter
+FROM "movie_db"."public"."stg_movies"
+WHERE release_date IS NOT NULL
+  );
+  
+[0m22:14:31.210503 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:14:31.210503 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:14:31.271338 [debug] [Thread-4 (]: SQL status: SELECT 10 in 0.060 seconds
+[0m22:14:31.271864 [debug] [Thread-3 (]: SQL status: SELECT 198 in 0.060 seconds
+[0m22:14:31.281979 [debug] [Thread-4 (]: Using postgres connection "model.movie_dbt.dim_genres"
+[0m22:14:31.286905 [debug] [Thread-3 (]: Using postgres connection "model.movie_dbt.dim_date"
+[0m22:14:31.287410 [debug] [Thread-4 (]: On model.movie_dbt.dim_genres: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.dim_genres"} */
+alter table "movie_db"."public"."dim_genres__dbt_tmp" rename to "dim_genres"
+[0m22:14:31.287410 [debug] [Thread-3 (]: On model.movie_dbt.dim_date: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.dim_date"} */
+alter table "movie_db"."public"."dim_date__dbt_tmp" rename to "dim_date"
+[0m22:14:31.291195 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m22:14:31.291702 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m22:14:31.293283 [debug] [Thread-3 (]: On model.movie_dbt.dim_date: COMMIT
+[0m22:14:31.295427 [debug] [Thread-4 (]: On model.movie_dbt.dim_genres: COMMIT
+[0m22:14:31.296551 [debug] [Thread-3 (]: Using postgres connection "model.movie_dbt.dim_date"
+[0m22:14:31.297057 [debug] [Thread-4 (]: Using postgres connection "model.movie_dbt.dim_genres"
+[0m22:14:31.297783 [debug] [Thread-3 (]: On model.movie_dbt.dim_date: COMMIT
+[0m22:14:31.298322 [debug] [Thread-4 (]: On model.movie_dbt.dim_genres: COMMIT
+[0m22:14:31.303810 [debug] [Thread-4 (]: SQL status: COMMIT in 0.004 seconds
+[0m22:14:31.304347 [debug] [Thread-3 (]: SQL status: COMMIT in 0.006 seconds
+[0m22:14:31.308391 [debug] [Thread-4 (]: Applying DROP to: "movie_db"."public"."dim_genres__dbt_backup"
+[0m22:14:31.312276 [debug] [Thread-3 (]: Applying DROP to: "movie_db"."public"."dim_date__dbt_backup"
+[0m22:14:31.315925 [debug] [Thread-4 (]: Using postgres connection "model.movie_dbt.dim_genres"
+[0m22:14:31.316932 [debug] [Thread-3 (]: Using postgres connection "model.movie_dbt.dim_date"
+[0m22:14:31.317992 [debug] [Thread-4 (]: On model.movie_dbt.dim_genres: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.dim_genres"} */
+drop table if exists "movie_db"."public"."dim_genres__dbt_backup" cascade
+[0m22:14:31.317992 [debug] [Thread-3 (]: On model.movie_dbt.dim_date: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.dim_date"} */
+drop table if exists "movie_db"."public"."dim_date__dbt_backup" cascade
+[0m22:14:31.320677 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m22:14:31.321184 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m22:14:31.322771 [debug] [Thread-3 (]: On model.movie_dbt.dim_date: Close
+[0m22:14:31.324353 [debug] [Thread-4 (]: On model.movie_dbt.dim_genres: Close
+[0m22:14:31.325385 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B30006E90>]}
+[0m22:14:31.326548 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F4D1610>]}
+[0m22:14:31.327766 [info ] [Thread-3 (]: 2 of 4 OK created sql table model public.dim_date .............................. [[32mSELECT 198[0m in 0.16s]
+[0m22:14:31.329684 [debug] [Thread-3 (]: Finished running node model.movie_dbt.dim_date
+[0m22:14:31.328612 [info ] [Thread-4 (]: 3 of 4 OK created sql table model public.dim_genres ............................ [[32mSELECT 10[0m in 0.16s]
+[0m22:14:31.331294 [debug] [Thread-4 (]: Finished running node model.movie_dbt.dim_genres
+[0m22:14:31.331821 [debug] [Thread-1 (]: Began running node model.movie_dbt.fact_movies
+[0m22:14:31.332828 [info ] [Thread-1 (]: 4 of 4 START sql table model public.fact_movies ................................ [RUN]
+[0m22:14:31.334652 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movie_dbt.stg_movies, now model.movie_dbt.fact_movies)
+[0m22:14:31.335159 [debug] [Thread-1 (]: Began compiling node model.movie_dbt.fact_movies
+[0m22:14:31.339937 [debug] [Thread-1 (]: Writing injected SQL for node "model.movie_dbt.fact_movies"
+[0m22:14:31.342172 [debug] [Thread-1 (]: Began executing node model.movie_dbt.fact_movies
+[0m22:14:31.348152 [debug] [Thread-1 (]: Writing runtime sql for node "model.movie_dbt.fact_movies"
+[0m22:14:31.351267 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.fact_movies"
+[0m22:14:31.352606 [debug] [Thread-1 (]: On model.movie_dbt.fact_movies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.fact_movies"} */
+
+  
+    
+
+  create  table "movie_db"."public"."fact_movies__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    m.movie_id,
+    m.title,
+    m.release_date AS date_key,
+    g.genre_key,
+    m.budget,
+    m.revenue,
+    (m.revenue - m.budget) AS profit,
+    m.rating
+FROM "movie_db"."public"."stg_movies" m
+LEFT JOIN "movie_db"."public"."dim_genres" g 
+    ON m.genre = g.genre_name
+  );
+  
+[0m22:14:31.353618 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:14:31.393661 [debug] [Thread-1 (]: SQL status: SELECT 200 in 0.040 seconds
+[0m22:14:31.398483 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.fact_movies"
+[0m22:14:31.399014 [debug] [Thread-1 (]: On model.movie_dbt.fact_movies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.fact_movies"} */
+alter table "movie_db"."public"."fact_movies__dbt_tmp" rename to "fact_movies"
+[0m22:14:31.401783 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m22:14:31.403449 [debug] [Thread-1 (]: On model.movie_dbt.fact_movies: COMMIT
+[0m22:14:31.404585 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.fact_movies"
+[0m22:14:31.405118 [debug] [Thread-1 (]: On model.movie_dbt.fact_movies: COMMIT
+[0m22:14:31.409894 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m22:14:31.412602 [debug] [Thread-1 (]: Applying DROP to: "movie_db"."public"."fact_movies__dbt_backup"
+[0m22:14:31.413607 [debug] [Thread-1 (]: Using postgres connection "model.movie_dbt.fact_movies"
+[0m22:14:31.414609 [debug] [Thread-1 (]: On model.movie_dbt.fact_movies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "movie_dbt", "target_name": "dev", "node_id": "model.movie_dbt.fact_movies"} */
+drop table if exists "movie_db"."public"."fact_movies__dbt_backup" cascade
+[0m22:14:31.416487 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m22:14:31.418584 [debug] [Thread-1 (]: On model.movie_dbt.fact_movies: Close
+[0m22:14:31.419805 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd16b9c10-2039-42fc-998d-fae00f836e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2FBC24D0>]}
+[0m22:14:31.420879 [info ] [Thread-1 (]: 4 of 4 OK created sql table model public.fact_movies ........................... [[32mSELECT 200[0m in 0.09s]
+[0m22:14:31.421426 [debug] [Thread-1 (]: Finished running node model.movie_dbt.fact_movies
+[0m22:14:31.423530 [debug] [MainThread]: On master: COMMIT
+[0m22:14:31.424061 [debug] [MainThread]: Using postgres connection "master"
+[0m22:14:31.424592 [debug] [MainThread]: On master: COMMIT
+[0m22:14:31.425139 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:14:31.442982 [debug] [MainThread]: SQL status: COMMIT in 0.018 seconds
+[0m22:14:31.444650 [debug] [MainThread]: On master: Close
+[0m22:14:31.445696 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:14:31.446238 [debug] [MainThread]: Connection 'list_movie_db' was properly closed.
+[0m22:14:31.446775 [debug] [MainThread]: Connection 'list_movie_db_public' was properly closed.
+[0m22:14:31.447299 [debug] [MainThread]: Connection 'model.movie_dbt.fact_movies' was properly closed.
+[0m22:14:31.447824 [debug] [MainThread]: Connection 'model.movie_dbt.dim_date' was properly closed.
+[0m22:14:31.448355 [debug] [MainThread]: Connection 'model.movie_dbt.dim_genres' was properly closed.
+[0m22:14:31.448887 [info ] [MainThread]: 
+[0m22:14:31.449418 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.96 seconds (0.96s).
+[0m22:14:31.451647 [debug] [MainThread]: Command end result
+[0m22:14:31.488482 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\manifest.json
+[0m22:14:31.495482 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\semantic_manifest.json
+[0m22:14:31.499517 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\osi_document.json
+[0m22:14:31.507035 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Dhairya Parmar\Desktop\practice\movie_analytics_pipeline\movie_dbt\target\run_results.json
+[0m22:14:31.508032 [info ] [MainThread]: 
+[0m22:14:31.508032 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:14:31.509034 [info ] [MainThread]: 
+[0m22:14:31.510033 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m22:14:31.511141 [debug] [MainThread]: Command `dbt run` succeeded at 22:14:31.511141 after 2.66 seconds
+[0m22:14:31.512152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F2A7790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F102710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F1B2390>]}
+[0m22:14:31.512152 [debug] [MainThread]: Flushing usage events
+[0m22:14:32.484376 [debug] [MainThread]: An error was encountered while trying to flush usage events

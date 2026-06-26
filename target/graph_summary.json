@@ -1,0 +1,1 @@
+{"_invocation_id": "d16b9c10-2039-42fc-998d-fae00f836e68", "linked": {"0": {"name": "model.movie_dbt.dim_genres", "type": "model", "succ": [3]}, "1": {"name": "model.movie_dbt.stg_movies", "type": "model", "succ": [0, 2, 3]}, "2": {"name": "model.movie_dbt.dim_date", "type": "model"}, "3": {"name": "model.movie_dbt.fact_movies", "type": "model"}}}
